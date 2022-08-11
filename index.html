@@ -9,7 +9,12 @@
     <style>
         @font-face {
             font-family: myFirstFont;
-            src: url(hiragana_tfb.ttf);
+            src: url('sazanami-gothic.otf');
+        }
+
+        @font-face {
+            font-family: myJapaneseFont;
+            src: url('sazanami-gothic.otf') format('opentype');
         }
 
         #myIntro {
@@ -49,7 +54,7 @@
 
         body { 
             background-color: black;
-            color: red; 
+            color: rgb(194, 31, 31); 
             font-family: 'Georgia, serif';
         }
 
@@ -68,7 +73,11 @@
             padding-left: 500px;
             padding-bottom: 500px;
         }
-
+        #seq {
+            font-family: myJapaneseFont;
+            padding-top: -50px;
+            color:rgb(217, 255, 2)
+        }
 
     </style>
 
@@ -80,7 +89,7 @@
     </ul>
 </head>
 <body>
-    Konnichiwa/<nobr id="myIntro">Konnichiwa</nobr>!<br>
+    <nobr id="seq">Konnichiwa/</nobr><nobr id="myIntro">こんにちは</nobr>!<br>
         (Good Morning!)
     <h3 id="myHeader1">Jacob Thomas ...</h3>
     <h3 id="myHeader2">Developer, Innovator, Automation Adventurer</h3>
