@@ -28,28 +28,29 @@
             width: 50%;
         }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+        #topnav {
+            background-color: #333;
+            position: fixed;
+            top: -50px;
+            width: -20%;
+            left: 75%;
+            display: block;
+            transition: top 1.0s;
         }
 
-        li {
+        #topnav a {
             float: right;
-        }
-
-        li a {
             display: block;
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            background-color: #333;
+            font-size: 17px;
         }
 
-        li a:hover {
+        #topnav a:hover {
             background-color: #111;
+            color: black;
         }
 
         body { 
@@ -81,19 +82,32 @@
 
     </style>
 
-    <ul class="topnav">
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
+    <div id="topnav">
+        <a href="#home">Home</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#projects">Project</a>
+    </div>
 </head>
 <body>
-    <nobr id="seq">Konnichiwa/</nobr><nobr id="myIntro">こんにちは</nobr>!<br>
+    <nobr id="seq">Konnichiwa! </nobr><nobr id="myIntro">こんにちは</nobr>!<br>
         (Good Morning!)
     <h3 id="myHeader1">Jacob Thomas ...</h3>
     <h3 id="myHeader2">Developer, Innovator, Automation Adventurer</h3>
     <h3 id="myHeader3">& Lifetime Scholar</h3>
     <img src="https://static.wixstatic.com/media/022770_e80e384a55474ea6a410b64cf97ad843~mv2.png" alt="Moogle picture" style="width:300px; height:300px;" class= "center">
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTo > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("topnav").style.top = "0";
+            }
+            else {
+                document.getElementById("topnav").style.top = "-50px";
+            }
+        }
+    </script>
 </body>
 </html>
